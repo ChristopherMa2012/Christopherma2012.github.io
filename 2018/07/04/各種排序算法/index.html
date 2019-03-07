@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>各種排序算法 | 茅己观影说</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、算法性能排序情形一：数组长度 &amp;lt;= 45， 选择排序 ≈ 快速排序性能 ；情形二：数组长度 &amp;gt; 45,   选择排序 劣于 快速排序性能； 总体比较： 快速排序 &amp;gt; 选择排序 &amp;gt; 冒泡排序； 总结：数组的元素越多，上面各种排序的性能差异越明显；">
+<meta property="og:type" content="article">
+<meta property="og:title" content="各種排序算法">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/各種排序算法/index.html">
+<meta property="og:site_name" content="茅己观影说">
+<meta property="og:description" content="一、算法性能排序情形一：数组长度 &amp;lt;= 45， 选择排序 ≈ 快速排序性能 ；情形二：数组长度 &amp;gt; 45,   选择排序 劣于 快速排序性能； 总体比较： 快速排序 &amp;gt; 选择排序 &amp;gt; 冒泡排序； 总结：数组的元素越多，上面各种排序的性能差异越明显；">
+<meta property="og:image" content="http://yoursite.com/images/sort/quickSort.PNG">
+<meta property="og:image" content="http://yoursite.com/images/sort/selectSort.PNG">
+<meta property="og:image" content="http://yoursite.com/images/sort/bubbleSort.PNG">
+<meta property="og:updated_time" content="2018-12-17T13:08:00.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="各種排序算法">
+<meta name="twitter:description" content="一、算法性能排序情形一：数组长度 &amp;lt;= 45， 选择排序 ≈ 快速排序性能 ；情形二：数组长度 &amp;gt; 45,   选择排序 劣于 快速排序性能； 总体比较： 快速排序 &amp;gt; 选择排序 &amp;gt; 冒泡排序； 总结：数组的元素越多，上面各种排序的性能差异越明显；">
+<meta name="twitter:image" content="http://yoursite.com/images/sort/quickSort.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="茅己观影说" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+    <audio src='faded_Alan.mp3' autoplay loop></audio>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">茅己观影说</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">细致生活，点滴记录</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-各種排序算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/04/各種排序算法/" class="article-date">
+  <time datetime="2018-07-04T01:01:59.000Z" itemprop="datePublished">2018-07-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      各種排序算法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、算法性能排序"><a href="#一、算法性能排序" class="headerlink" title="一、算法性能排序"></a>一、算法性能排序</h3><p>情形一：数组长度 &lt;= 45， 选择排序 ≈ 快速排序性能 ；<br>情形二：数组长度 &gt; 45,   选择排序 劣于 快速排序性能；</p>
+<p>总体比较： 快速排序 &gt; 选择排序 &gt; 冒泡排序；</p>
+<p>总结：数组的元素越多，上面各种排序的性能差异越明显；  </p>
+<a id="more"></a>
+<h3 id="附：排序性能截图"><a href="#附：排序性能截图" class="headerlink" title="附：排序性能截图"></a>附：排序性能截图</h3><p>一、快速排序  </p>
+<p><img src="/images/sort/quickSort.PNG" alt="">  </p>
+<p>二、选择排序  </p>
+<p><img src="/images/sort/selectSort.PNG" alt=""> </p>
+<p>三、冒泡排序 </p>
+<p><img src="/images/sort/bubbleSort.PNG" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/04/各種排序算法/" data-id="cjsy0rgih00091oszsmkm3nmh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/20/各种protoype/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">各种protoype</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/04/各種排序算法/">各種排序算法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/20/各种protoype/">各种protoype</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/09/VSCode使用配置/">VSCode使用配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/06/fetch使用总结/">fetch使用总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/02/meta标签集合/">meta标签集合</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 茅己<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
